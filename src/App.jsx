@@ -1,7 +1,8 @@
 import React from "react"; 
 import Posts from "./Posts";
 import AxiosPost from "./AxiosPost";
-import Home from "./Home";
+// import Home from "./Home";
+import ViewPosts from "./ViewPosts";
 import { BrowserRouter ,Route,Routes} from "react-router";
 function App() {
 
@@ -10,8 +11,8 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/posts" element={<Posts/>}/>
+        <Route path="/" element={<Posts/>}/>
+        <Route path="/post/:id" element={<ViewPosts/>}/>
         <Route path="/create" element={<AxiosPost/>}/>
         
         

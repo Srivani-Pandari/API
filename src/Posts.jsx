@@ -1,6 +1,9 @@
 import React, { useEffect ,useState} from "react";
 import {Link} from "react-router";
+// import ViewPosts from "./ViewPosts";
+
 import "./style.css";
+
 
 
 
@@ -57,18 +60,23 @@ const Posts=()=>{
 
     return(
         <>
-        <div className="container">
+
+       
+         <div className="container"> 
+         {/* <ViewPosts currentItems={currentItems}/> */}
         {  
         
-            currentItems.map((value,index)=>(
+            currentItems.map((post)=>(
             
-            <ul key={index} className="info">
-                <div className="Title">{value.title}</div>
-                <div className="Body">{value.body}</div>
+            <ul key={post.id} className="info">
+            <Link to={`post/${post.id}`}>
+                <div className="Title">{post.title}</div>
+            </Link>
+                {/* <div className="Body">{post.body}</div> */}
             </ul>
             
              ) )
-        }
+        } 
 
         <div className="Pagination">
             <button onClick={handlePrev}  className="option" disabled={currPage===1} >Prev</button>
@@ -77,14 +85,21 @@ const Posts=()=>{
             ))}
             <button onClick={handleNext} className="option" disabled={currPage===totalPages} >Next</button>
         </div>
-        </div>
+         </div> 
 
         
             
+
+         <h4>
+           
+           <Link to="/create"> Create Post</Link>
+   
+           </h4>
         </>
     )
 
 
+   
 }
 
 export default Posts;

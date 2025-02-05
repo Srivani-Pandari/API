@@ -1,22 +1,18 @@
-import React from 'react'
-import {Link} from "react-router";
+// import React from 'react'
+// import {Link} from "react-router";
 
-const Home = () => {
-  return (
-    <>
+// const Home = () => {
+//   return (
+//     <>
         
-        <h4>
+//         <h4>
 
-        <Link to="/posts">View Posts</Link> 
+//         <Link to="/posts">View Posts</Link> 
 
-        </h4>
-
-        <h4>
-           
-        <Link to="/create"> Create Post</Link>
-
-        </h4>
-    </>
-  )
-}
-export default Home;
+//         </h4>
+      
+        
+//     </>
+//   )
+// }
+// export default Home;
